@@ -127,6 +127,12 @@
 
     },
 
+    watch: {
+      defaultIndex(){
+        this.reInitPages();
+      }
+    },
+
     methods: {
       swipeItemCreated() {
         if (!this.ready) return;
@@ -181,7 +187,7 @@
 
         var pages = [];
         this.index = this.defaultIndex;
-        
+
         children.forEach((child, index) => {
           pages.push(child.$el);
 
